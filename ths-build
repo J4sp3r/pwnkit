@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -e
+
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root."
+  exit
+fi
+
+./ths-ascii
+
+# Check for docker
+
+echo "Pulling latest base image . . ."
+docker pull kalilinux/kali-linux-docker:latest
+echo "Base image pulled."
+
+echo "Building docker image . . ."
+docker build -t jasperboot/ths-toolkit:latest --pull .
+echo "Docker image built successfully."
+
+echo "Pushing new version to registry . . ."
+docker push jasperboot/ths-toolkit:latest
+echo "New image pushed succesfully!"
