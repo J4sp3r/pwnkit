@@ -12,5 +12,5 @@ docker pull jasperboot/ths-toolkit:latest
 echo "Image pulled succesfully!"
 
 echo "Pulling latest version from GitHub . . ."
-git pull
+git -C "$MY_PATH" pull
 echo "Succesfully updated to the latest version!"
