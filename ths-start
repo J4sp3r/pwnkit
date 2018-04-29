@@ -1,9 +1,4 @@
 #!/bin/bash
-if [ "$EUID" -ne 0 ]
-  then echo "Please run as root."
-  exit
-fi
-
 if [[ "$(docker images jasperboot/ths-toolkit:latest | grep ths 2> /dev/null)" == "" ]]; then
   echo "THS is not installed yet. Please run ths-update."
 else
