@@ -2,6 +2,7 @@
 if [[ "$(docker images jasperboot/ths-toolkit:latest | grep ths 2> /dev/null)" == "" ]]; then
   echo "THS is not installed yet. Please run ths-update."
 else
-  ./ths-ascii
+  MY_PATH="`dirname \"$0\"`"
+  "$MY_PATH/ths-ascii"
   docker run -t -i --rm jasperboot/ths-toolkit:latest /bin/bash
 fi

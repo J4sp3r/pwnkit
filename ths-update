@@ -2,7 +2,8 @@
 
 set -e
 
-./ths-ascii
+MY_PATH="`dirname \"$0\"`"
+"$MY_PATH/ths-ascii"
 
 # Check for docker
 
