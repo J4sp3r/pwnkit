@@ -8,5 +8,5 @@ if [[ "$(docker images jasperboot/ths-toolkit:latest | grep ths 2> /dev/null)" =
   echo "THS is not installed yet. Please run ths-update."
 else
   ./ths-ascii
-  docker run -t -i jasperboot/ths-toolkit:latest /bin/bash
+  docker run -t -i --rm jasperboot/ths-toolkit:latest /bin/bash
 fi
