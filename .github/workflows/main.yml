@@ -17,4 +17,4 @@ jobs:
     - name: Build and push
       uses: actions/docker/cli@master
       with:
-        args: build -t jasperboot/ths-toolkit src && docker push jasperboot/ths-toolkit
+        args: build -t jasperboot/ths-toolkit . && docker push jasperboot/ths-toolkit
