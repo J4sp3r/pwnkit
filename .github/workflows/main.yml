@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+    - master
+name: Build & Push container
+jobs:
+  dockerRegistry:
+    name: Docker Registry
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Login to registry
+      uses: actions/docker/login@8cdf801b322af5f369e00d85e9cf3a7122f49108
+      env:
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+    - name: Build and push
+      uses: actions/docker/cli@8cdf801b322af5f369e00d85e9cf3a7122f49108
+      with:
+        args: build -t jasperboot/ths-toolkit src && docker push jasperboot/ths-toolkit
