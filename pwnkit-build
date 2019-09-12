@@ -3,7 +3,7 @@
 set -e
 
 MY_PATH="`dirname \"$0\"`"
-"$MY_PATH/ths-ascii"
+"$MY_PATH/pwnkit-ascii"
 
 # Check for docker
 
@@ -12,9 +12,9 @@ docker pull kalilinux/kali-linux-docker:latest
 echo "Base image pulled."
 
 echo "Building docker image . . ."
-docker build -t jasperboot/ths-toolkit:latest --pull .
+docker build -t jasperboot/pwnkit:latest --pull .
 echo "Docker image built successfully."
 
 echo "Pushing new version to registry . . ."
-docker push jasperboot/ths-toolkit:latest
+docker push jasperboot/pwnkit:latest
 echo "New image pushed succesfully!"

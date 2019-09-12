@@ -3,12 +3,12 @@
 set -e
 
 MY_PATH="`dirname \"$0\"`"
-"$MY_PATH/ths-ascii"
+"$MY_PATH/pwnkit-ascii"
 
 # Check for docker
 
-echo "Pulling latest ths-toolkit image . . ."
-docker pull jasperboot/ths-toolkit:latest
+echo "Pulling latest pwnkit image . . ."
+docker pull jasperboot/pwnkit:latest
 echo "Image pulled succesfully!"
 
 echo "Pulling latest version from GitHub . . ."

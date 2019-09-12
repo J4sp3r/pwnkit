@@ -1,5 +1,0 @@
-#!/bin/bash
-set -e
-MY_PATH="`dirname \"$0\"`"
-"$MY_PATH/ths-update" >/dev/null
-"$MY_PATH/ths-start"

@@ -8,12 +8,25 @@ RUN apt-get install -y kali-linux-full
 RUN apt-get update && apt-get install -y gobuster
 RUN apt-get install -y libssl-dev libcurl4-openssl-dev
 
+# Set the locale
+RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && locale-gen
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
+
 # Python tools
 RUN pip install --upgrade pip
 RUN pip install --upgrade pwntools
 RUN pip3 install --upgrade wfuzz
 RUN pip3 install --upgrade z3-solver
+RUN pip3 install --upgrade keystone-engine
+RUN pip3 install --upgrade unicorn
+RUN pip3 install --upgrade ropper
 RUN pip3 install --upgrade git+https://github.com/arthaud/python3-pwntools.git
+
+# Other tools
+RUN git clone https://github.com/hugsy/gef.git .gef && \
+    echo "source $(pwd)/.gef/gef.py" >> ~/.gdbinit
 
 # Create work directories
 RUN mkdir /root/workdir
