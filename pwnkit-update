@@ -8,7 +8,7 @@ MY_PATH="`dirname \"$0\"`"
 # Check for docker
 
 echo "Pulling latest pwnkit image . . ."
-docker pull docker.pkg.github.com/j4sp3r/pwnkit/pwnkit:latest
+docker pull jasperboot/pwnkit:latest
 echo "Image pulled succesfully!"
 
 echo "Pulling latest version from GitHub . . ."
