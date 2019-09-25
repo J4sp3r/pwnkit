@@ -10,6 +10,12 @@ This tool is only tested for Linux and Mac, it might or might not work on Window
 1. Optional: Add extracted location to path for easy execution.
 1. Run `./pwnkit` or `pwnkit`.
 
+## Mounting a volume into pwnkit
+Change the file ./pwnkit-start from  
+```docker run -i -t --rm jasperboot/pwnkit:latest /bin/bash```  
+to  
+```docker run -i -t --rm -v [LOCAL FOLDER]:/challenges/ jasperboot/pwnkit:latest /bin/bash```
+
 `pwnkit` is used to update and start the toolkit.  
 `pwnkit-update` is used to update the image and git repo.  
 `pwnkit-start` is used to start the toolkit. To update as well, use `pwnkit`.  
