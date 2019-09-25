@@ -19,4 +19,4 @@ jobs:
     - name: Build and push
       uses: actions/docker/cli@master
       with:
-        args: build -t docker.pkg.github.com/j4sp3r/pwnkit . && docker push docker.pkg.github.com/j4sp3r/pwnkit
+        args: build -t docker.pkg.github.com/j4sp3r/pwnkit/pwnkit:latest . && docker push docker.pkg.github.com/j4sp3r/pwnkit/pwnkit:latest
