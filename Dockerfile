@@ -1,12 +1,7 @@
-FROM kalilinux/kali-linux-docker
-
-# Install kali stuff
-RUN apt-get update --fix-missing
-RUN apt-get install -y kali-linux-full
+FROM jasperboot/kali-full:latest
 
 # Software tools
-RUN apt-get update && apt-get install -y gobuster
-RUN apt-get install -y libssl-dev libcurl4-openssl-dev
+RUN apt-get update && apt-get install -y gobuster libcurl4-openssl-dev libssl-dev
 
 # Set the locale
 RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && locale-gen

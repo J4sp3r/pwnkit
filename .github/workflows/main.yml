@@ -1,3 +1,4 @@
+ 
 on:
   push:
     branches:
@@ -14,7 +15,8 @@ jobs:
       env:
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_REGISTRY_URL: "docker.pkg.github.com"
     - name: Build and push
       uses: actions/docker/cli@master
       with:
-        args: build -t jasperboot/pwnkit . && docker push jasperboot/pwnkit
+        args: build -t docker.pkg.github.com/j4sp3r/pwnkit . && docker push docker.pkg.github.com/j4sp3r/pwnkit
