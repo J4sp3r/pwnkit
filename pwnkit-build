@@ -12,9 +12,9 @@ docker pull jasperboot/kali-full:latest
 echo "Base image pulled."
 
 echo "Building docker image . . ."
-docker build -t jasperboot/pwnkit:latest --pull .
+docker build -t docker.pkg.github.com/j4sp3r/pwnkit/pwnkit:latest --pull .
 echo "Docker image built successfully."
 
 echo "Pushing new version to registry . . ."
-docker jasperboot/pwnkit:latest
+docker docker.pkg.github.com/j4sp3r/pwnkit/pwnkit:latest
 echo "New image pushed succesfully!"
