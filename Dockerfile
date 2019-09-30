@@ -30,6 +30,7 @@ WORKDIR /root/tools
 
 ## Clone Github tools
 RUN git clone https://github.com/Ganapati/RsaCtfTool.git
+RUN cp /usr/share/wordlists/rockyou.txt.gz /root/tools && gunzip /root/tools/rockyou.txt.gz
 
 
 WORKDIR /root/workdir
