@@ -18,6 +18,7 @@ RUN pip3 install --upgrade keystone-engine
 RUN pip3 install --upgrade unicorn
 RUN pip3 install --upgrade ropper
 RUN pip3 install --upgrade git+https://github.com/arthaud/python3-pwntools.git
+RUN pip3 install --upgrade uncompyle6
 
 # Other tools
 RUN git clone https://github.com/hugsy/gef.git .gef && \
