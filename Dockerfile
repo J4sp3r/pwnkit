@@ -1,7 +1,7 @@
 FROM jasperboot/kali-full:latest
 
 # Software tools
-RUN apt-get update && apt-get install -y gobuster libcurl4-openssl-dev libssl-dev
+RUN apt-get update && apt-get install -y gobuster libcurl4-openssl-dev libssl-dev python3-pip
 
 # Set the locale
 RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && locale-gen
