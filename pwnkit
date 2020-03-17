@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+[ "$UID" -eq 0 ] || exec sudo bash "$0" "$@"
 MY_PATH="`dirname \"$0\"`"
 "$MY_PATH/pwnkit-update"
 "$MY_PATH/pwnkit-start"
