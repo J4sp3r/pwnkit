@@ -2,8 +2,9 @@ FROM kalilinux/kali-rolling:latest
 
 # Software tools
 RUN apt-get update
-RUN apt-get install -y binwalk
-RUN apt-get install -y cmake
+
+RUN apt-get install -y binwalk cmake libcurl4-openssl-dev libgmp3-dev libmpc-dev libssl-dev locales metasploit-framework
+
 RUN apt-get install -y dirb
 RUN apt-get install -y exploitdb
 RUN apt-get install -y fcrackzip
@@ -11,12 +12,6 @@ RUN apt-get install -y gdb
 RUN apt-get install -y git
 RUN apt-get install -y john
 RUN apt-get install -y joomscan
-RUN apt-get install -y libcurl4-openssl-dev
-RUN apt-get install -y libgmp3-dev
-RUN apt-get install -y libmpc-dev
-RUN apt-get install -y libssl-dev
-RUN apt-get install -y locales
-RUN apt-get install -y metasploit-framework
 RUN apt-get install -y nmap
 RUN apt-get install -y php
 RUN apt-get install -y php-mysql
