@@ -1,33 +1,32 @@
 FROM kalilinux/kali-rolling:latest
 
 # Software tools
-RUN apt-get update && apt-get install -y \
-    binwalk \
-    cmake \
-    dirb \
-    exploitdb \
-    fcrackzip \
-    gdb \
-    git \
-    hashcat \
-    john \
-    joomscan \
-    libcurl4-openssl-dev \
-    libgmp3-dev \
-    libmpc-dev \
-    libssl-dev \
-    locales \
-    metasploit-framework \
-    nmap \
-    php \
-    php-mysql \
-    python3-pip \
-    screen \
-    smbmap \
-    sqlmap \
-    wfuzz \
-    wordlists \
-    zsh
+RUN apt-get update
+RUN apt-get install -y binwalk
+RUN apt-get install -y cmake
+RUN apt-get install -y dirb
+RUN apt-get install -y exploitdb
+RUN apt-get install -y fcrackzip
+RUN apt-get install -y gdb
+RUN apt-get install -y git
+RUN apt-get install -y john
+RUN apt-get install -y joomscan
+RUN apt-get install -y libcurl4-openssl-dev
+RUN apt-get install -y libgmp3-dev
+RUN apt-get install -y libmpc-dev
+RUN apt-get install -y libssl-dev
+RUN apt-get install -y locales
+RUN apt-get install -y metasploit-framework
+RUN apt-get install -y nmap
+RUN apt-get install -y php
+RUN apt-get install -y php-mysql
+RUN apt-get install -y python3-pip
+RUN apt-get install -y screen
+RUN apt-get install -y smbmap
+RUN apt-get install -y sqlmap
+RUN apt-get install -y wfuzz
+RUN apt-get install -y wordlists
+RUN apt-get install -y zsh
 
 RUN apt-get autoremove
 
