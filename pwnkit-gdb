@@ -7,5 +7,5 @@ else
   MY_PATH="`dirname \"$0\"`"
   "$MY_PATH/pwnkit-ascii"
   INSTANCE=$(sudo docker ps -q)
-  sudo docker exec -it $INSTANCE bash -c 'while true; do screen -drqAS gdb-session; sleep 1; done'
+  sudo docker exec -it $INSTANCE /bin/zsh -c 'while true; do screen -drqAS gdb-session; sleep 1; done'
 fi

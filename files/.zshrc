@@ -26,7 +26,7 @@ ZSH_THEME="maran"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -100,9 +100,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Disable bluetooth
-#rfkill block bluetooth
-
 DEFAULT_USER=root
-
-PATH=$PATH:/home/jasper/.gem/ruby/2.7.0/bin
+PYTHONIOENCODING=utf-8

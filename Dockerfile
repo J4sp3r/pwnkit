@@ -12,6 +12,7 @@ RUN apt-get install -y gdb
 RUN apt-get install -y git
 RUN apt-get install -y john
 RUN apt-get install -y joomscan
+RUN apt-get install -y nano
 RUN apt-get install -y nmap
 RUN apt-get install -y php
 RUN apt-get install -y php-mysql
@@ -26,6 +27,7 @@ RUN apt-get install -y zsh
 RUN apt-get autoremove
 
 # Set the locale
+RUN sed -i 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
 RUN locale-gen "en_US.UTF-8"
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
