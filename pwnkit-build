@@ -8,7 +8,7 @@ MY_PATH="`dirname \"$0\"`"
 # Check for docker
 
 echo "Pulling latest base image . . ."
-docker pull jasperboot/kali-full:latest
+docker pull kalilinux/kali-rolling:latest
 echo "Base image pulled."
 
 echo "Building docker image . . ."

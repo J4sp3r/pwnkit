@@ -5,5 +5,5 @@ else
   clear
   MY_PATH="`dirname \"$0\"`"
   "$MY_PATH/pwnkit-ascii"
-  docker run -i -t --rm jasperboot/pwnkit:latest /bin/bash
+  docker run -i -t --rm --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -v /challenges/:/challenges/ jasperboot/pwnkit:latest
 fi

@@ -1,0 +1,10 @@
+#!/bin/bash
+if [[ "$(docker images jasperboot/pwnkit:latest | grep pwnkit 2> /dev/null)" == "" ]]; then
+  echo "pwnkit is not installed yet."
+else
+  clear
+  MY_PATH="`dirname \"$0\"`"
+  "$MY_PATH/pwnkit-ascii"
+  INSTANCE=$(docker ps -q)
+  docker exec -it $INSTANCE bash -c 'while true; do screen -drqAS gdb-session; sleep 1; done'
+fi
