@@ -1,9 +1,9 @@
 #!/bin/bash
-if [[ "$(docker images jasperboot/pwnkit:latest | grep pwnkit 2> /dev/null)" == "" ]]; then
+if [[ "$(sudo docker images jasperboot/pwnkit:latest | grep pwnkit 2> /dev/null)" == "" ]]; then
   echo "Pwnkit is not installed yet. Please run pwnkit-update."
 else
   clear
   MY_PATH="`dirname \"$0\"`"
   "$MY_PATH/pwnkit-ascii"
-  docker run -i -t --rm --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -v /challenges/:/challenges/ jasperboot/pwnkit:latest
+  sudo docker run -i -t --rm --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -v /challenges/:/challenges/ jasperboot/pwnkit:latest
 fi
