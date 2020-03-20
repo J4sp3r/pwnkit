@@ -13,6 +13,7 @@ RUN apt-get install -y git
 RUN apt-get install -y john
 RUN apt-get install -y joomscan
 RUN apt-get install -y nano
+RUN apt-get install -y netcat
 RUN apt-get install -y nmap
 RUN apt-get install -y php
 RUN apt-get install -y php-mysql
