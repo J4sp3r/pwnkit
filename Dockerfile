@@ -12,6 +12,7 @@ RUN apt-get install -y gdb
 RUN apt-get install -y git
 RUN apt-get install -y john
 RUN apt-get install -y joomscan
+RUN apt-get install -y libc6-i386
 RUN apt-get install -y nano
 RUN apt-get install -y netcat
 RUN apt-get install -y nmap
@@ -21,6 +22,7 @@ RUN apt-get install -y python3-pip
 RUN apt-get install -y screen
 RUN apt-get install -y smbmap
 RUN apt-get install -y sqlmap
+RUN apt-get install -y strace
 RUN apt-get install -y wfuzz
 RUN apt-get install -y wordlists
 RUN apt-get install -y zsh
