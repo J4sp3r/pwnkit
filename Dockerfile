@@ -41,6 +41,7 @@ ENV LC_ALL en_US.UTF-8
 # Python tools
 RUN pip3 install --upgrade pip
 
+RUN pip3 install --upgrade angr
 RUN pip3 install --upgrade GMPY2
 RUN pip3 install --upgrade keystone-engine
 RUN pip3 install --upgrade pwntools
