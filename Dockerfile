@@ -14,6 +14,7 @@ RUN apt-get install -y john
 RUN apt-get install -y joomscan
 RUN apt-get install -y libc6-i386
 RUN apt-get install -y ltrace
+RUN apt-get install -y man
 RUN apt-get install -y nano
 RUN apt-get install -y netcat
 RUN apt-get install -y nmap
