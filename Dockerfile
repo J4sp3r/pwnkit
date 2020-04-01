@@ -6,6 +6,7 @@ RUN apt-get update
 RUN apt-get install -y binwalk cmake libcurl4-openssl-dev libgmp3-dev libmpc-dev libssl-dev locales metasploit-framework
 
 RUN apt-get install -y dirb
+RUN apt-get install -y dnsutils
 RUN apt-get install -y exploitdb
 RUN apt-get install -y fcrackzip
 RUN apt-get install -y gdb
