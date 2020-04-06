@@ -80,7 +80,8 @@ RUN git clone https://github.com/Ganapati/RsaCtfTool.git
 # Cleanup and config
 RUN chsh -s $(which zsh)
 RUN cp /usr/share/wordlists/rockyou.txt.gz /tools && gunzip /tools/rockyou.txt.gz
-COPY ./files/launch-in-session.sh /tools/launch-in-session.sh
+
+COPY ./files/launch-in-screen /tools/
 COPY ./files/.zshrc /root/.zshrc
 
 WORKDIR /workdir

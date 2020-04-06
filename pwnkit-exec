@@ -1,0 +1,12 @@
+#!/bin/sh
+if [[ "$(sudo docker images jasperboot/pwnkit:latest | grep pwnkit 2> /dev/null)" == "" ]]; then
+  echo "Pwnkit is not installed yet. Please run pwnkit-update."
+else
+  INSTANCE=$(sudo docker ps -qf ancestor=jasperboot/pwnkit)
+  if [ -z "$INSTANCE" ]; then
+    echo "No pwnkit instance is running. Please run pwnkit-start first."
+    exit -1
+  fi
+
+  sudo docker exec -it "$INSTANCE" "$@"
+fi
