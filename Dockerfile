@@ -30,6 +30,7 @@ RUN apt-get install -y smbmap
 RUN apt-get install -y sqlmap
 RUN apt-get install -y strace
 RUN apt-get install -y tree
+RUN apt-get install -y vim
 RUN apt-get install -y wfuzz
 RUN apt-get install -y wordlists
 RUN apt-get install -y zsh
