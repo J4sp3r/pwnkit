@@ -11,9 +11,11 @@ RUN apt-get install -y exploitdb
 RUN apt-get install -y fcrackzip
 RUN apt-get install -y gdb
 RUN apt-get install -y git
+RUN apt-get install -y gobuster
 RUN apt-get install -y john
 RUN apt-get install -y joomscan
 RUN apt-get install -y libc6-i386
+RUN apt-get install -y libimage-exiftool-perl
 RUN apt-get install -y ltrace
 RUN apt-get install -y man
 RUN apt-get install -y nano
@@ -21,16 +23,20 @@ RUN apt-get install -y netcat
 RUN apt-get install -y nmap
 RUN apt-get install -y php
 RUN apt-get install -y php-mysql
+RUN apt-get install -y pngtools
 RUN apt-get install -y python3-pip
 RUN apt-get install -y screen
 RUN apt-get install -y smbmap
 RUN apt-get install -y sqlmap
 RUN apt-get install -y strace
+RUN apt-get install -y tree
+RUN apt-get install -y vim
 RUN apt-get install -y wfuzz
 RUN apt-get install -y wordlists
+RUN apt-get install -y xxd
 RUN apt-get install -y zsh
 
-RUN apt-get autoremove
+RUN apt-get autoremove -y
 
 # Set the locale
 RUN sed -i 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
@@ -68,7 +74,7 @@ RUN mkdir /workdir
 RUN mkdir /tools
 WORKDIR /tools
 
-## Clone Github tools
+# Clone Github tools
 RUN git clone https://github.com/Ganapati/RsaCtfTool.git
 
 # Cleanup and config
