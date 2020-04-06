@@ -68,7 +68,7 @@ RUN mkdir /workdir
 RUN mkdir /tools
 WORKDIR /tools
 
-## Clone Github tools
+# Clone Github tools
 RUN git clone https://github.com/Ganapati/RsaCtfTool.git
 
 # Cleanup and config
