@@ -11,6 +11,7 @@ RUN apt-get install -y exploitdb
 RUN apt-get install -y fcrackzip
 RUN apt-get install -y gdb
 RUN apt-get install -y git
+RUN apt-get install -y gobuster
 RUN apt-get install -y john
 RUN apt-get install -y joomscan
 RUN apt-get install -y libc6-i386
