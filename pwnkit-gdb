@@ -1,5 +1,5 @@
-#!/bin/bash
-[ "$UID" -eq 0 ] || exec sudo bash "$0" "$@"
+#!/bin/sh
+[ "$UID" -eq 0 ] || exec sudo sh "$0" "$@"
 if [[ "$(sudo docker images jasperboot/pwnkit:latest | grep pwnkit 2> /dev/null)" == "" ]]; then
   echo "pwnkit is not installed yet."
 else
