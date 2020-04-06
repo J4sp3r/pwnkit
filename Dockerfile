@@ -23,6 +23,7 @@ RUN apt-get install -y netcat
 RUN apt-get install -y nmap
 RUN apt-get install -y php
 RUN apt-get install -y php-mysql
+RUN apt-get install -y pngtools
 RUN apt-get install -y python3-pip
 RUN apt-get install -y screen
 RUN apt-get install -y smbmap
