@@ -32,6 +32,7 @@ RUN apt-get install -y strace
 RUN apt-get install -y tree
 RUN apt-get install -y vim
 RUN apt-get install -y wfuzz
+RUN apt-get install -y wine
 RUN apt-get install -y wordlists
 RUN apt-get install -y xxd
 RUN apt-get install -y zsh
@@ -51,6 +52,7 @@ RUN pip3 install --upgrade pip
 RUN pip3 install --upgrade angr
 RUN pip3 install --upgrade GMPY2
 RUN pip3 install --upgrade keystone-engine
+RUN pip3 install --upgrade git+https://github.com/calebstewart/pwncat.git
 RUN pip3 install --upgrade pwntools
 RUN pip3 install --upgrade PyCrypto
 RUN pip3 install --upgrade requests
