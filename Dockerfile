@@ -2,6 +2,7 @@ FROM kalilinux/kali-rolling:latest
 
 # Software tools
 RUN dpkg --add-architecture i386
+RUN export DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
 
 RUN apt-get install -y binwalk cmake libcurl4-openssl-dev libgmp3-dev libmpc-dev libssl-dev locales metasploit-framework
