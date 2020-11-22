@@ -18,15 +18,19 @@ RUN apt-get install -y john
 RUN apt-get install -y joomscan
 RUN apt-get install -y libc6-i386
 RUN apt-get install -y libimage-exiftool-perl
+RUN apt-get install -y libpcre++-dev
 RUN apt-get install -y ltrace
 RUN apt-get install -y man
 RUN apt-get install -y nano
 RUN apt-get install -y netcat
 RUN apt-get install -y nmap
+RUN apt-get install -y pcregrep
 RUN apt-get install -y php
 RUN apt-get install -y php-mysql
 RUN apt-get install -y pngtools
+RUN apt-get install -y python2
 RUN apt-get install -y python3-pip
+RUN apt-get install -y python-dev
 RUN apt-get install -y screen
 RUN apt-get install -y smbmap
 RUN apt-get install -y sqlmap
@@ -50,11 +54,20 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
 # Python tools
+COPY get-pip.py /tmp/get-pip.py
+RUN python2 /tmp/get-pip.py
+RUN rm /tmp/get-pip.py
+RUN pip2 install --upgrade pip
+RUN pip2 install --upgrade PyCrypto
+
+RUN alias python=python3
+RUN alias pip=pip3
 RUN pip3 install --upgrade pip
 
 RUN pip3 install --upgrade angr
 RUN pip3 install --upgrade GMPY2
 RUN pip3 install --upgrade keystone-engine
+RUN pip3 install --upgrade Pillow
 RUN pip3 install --upgrade git+https://github.com/calebstewart/pwncat.git
 RUN pip3 install --upgrade pwntools
 RUN pip3 install --upgrade PyCrypto
@@ -65,6 +78,7 @@ RUN pip3 install --upgrade SymPy
 RUN pip3 install --upgrade tqdm
 RUN pip3 install --upgrade uncompyle6
 RUN pip3 install --upgrade unicorn
+RUN pip3 install --upgrade urllib3
 RUN pip3 install --upgrade wfuzz
 RUN pip3 install --upgrade z3-solver
 
@@ -81,6 +95,8 @@ WORKDIR /tools
 
 # Clone Github tools
 RUN git clone https://github.com/Ganapati/RsaCtfTool.git
+RUN git clone https://github.com/volatilityfoundation/volatility.git
+RUN alias volatility="python2 /tools/volatility/vol.py"
 
 # Cleanup and config
 RUN chsh -s $(which zsh)
