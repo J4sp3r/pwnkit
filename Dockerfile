@@ -70,7 +70,7 @@ RUN pip3 install --upgrade keystone-engine
 RUN pip3 install --upgrade Pillow
 RUN pip3 install --upgrade git+https://github.com/calebstewart/pwncat.git
 RUN pip3 install --upgrade pwntools
-RUN pip3 install --upgrade PyCrypto
+RUN pip3 install --upgrade pycryptodome
 RUN pip3 install --upgrade requests
 RUN pip3 install --upgrade ropper
 RUN pip3 install --upgrade six
