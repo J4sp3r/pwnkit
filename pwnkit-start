@@ -6,5 +6,5 @@ else
   clear
   MY_PATH=$(dirname "$0")
   "$MY_PATH/pwnkit-ascii"
-  sudo docker run -i -t --rm --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -v /challenges/:/challenges/ jasperboot/pwnkit:latest
+  sudo docker run -i -t --rm --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -v /share/:/share/ -v /etc/hosts:/etc/hosts_host:ro -e PWNKIT_PATH=`pwd` jasperboot/pwnkit:latest
 fi
