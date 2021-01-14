@@ -1,0 +1,25 @@
+#!/bin/sh
+SESSION_NAME=$1
+if [ -z "$SESSION_NAME" ]; then
+    echo "USAGE: $0 SESSION [COMMAND]"
+    exit -1
+fi
+
+shift
+COMMAND=$@
+
+WAIT_TIMEOUT=100
+MY_SCRIPT=$(cat <<- EOF
+    echo 'Waiting for session "$SESSION_NAME" to be attached...'
+    kill_sleep() { kill \$SLEEP_PID; }
+    trap kill_sleep WINCH
+    sleep $WAIT_TIMEOUT &
+    SLEEP_PID=\$!
+    wait \$SLEEP_PID
+    clear
+    $COMMAND 
+EOF
+)
+
+screen -qXS "$SESSION_NAME" quit > /dev/null
+screen -dmS "$SESSION_NAME" sh -c "$MY_SCRIPT"

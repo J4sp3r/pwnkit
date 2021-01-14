@@ -1,0 +1,27 @@
+#!/bin/sh
+MY_PATH=$(dirname "$0")
+
+SESSION_NAME=$1
+if [ -z "$SESSION_NAME" ]; then
+    echo "USAGE: $0 SESSION_NAME"
+    exit -1
+fi
+
+MY_SCRIPT=$(cat <<- EOF
+    LAST_SESSION_RESULT=0
+    while true; do
+        if [ "\$LAST_SESSION_RESULT" = 0 ]; then
+            clear
+            $(cat $MY_PATH/pwnkit-ascii)
+            echo 'Waiting for session "$SESSION_NAME"...'
+        fi
+
+        screen -drqAS '$SESSION_NAME'
+        LAST_SESSION_RESULT=\$?
+
+        sleep 1
+    done
+EOF
+)
+
+$MY_PATH/pwnkit-exec sh -c "$MY_SCRIPT"

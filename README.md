@@ -23,5 +23,6 @@ to
 `pwnkit-gdb` is used to attach to a gdb session setup in pwntools. 
 
 ## Using pwntools and gdb
-1. Add the following to your pwntools script: ```context.terminal = ['/root/tools/launch-in-session.sh', 'gdb-session']```.
-2. When pwntools opens a gdb session, execute `pwnkit-gdb` on your local machine to attach.
+1. Add the following to your pwntools script: ```context.terminal = ['/tools/launch-in-screen', 'gdb-session']```.
+1. Execute `pwnkit-eternal-screen gdb-session` on your local machine.
+1. When pwntools opens a new gdb session, any previous sessions will be killed and the screen will be automatically attached.
