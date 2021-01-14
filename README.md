@@ -4,6 +4,11 @@ This is a collection of tools from Kali to run on any machine with a docker imag
 
 This tool is only tested for Linux and Mac, it might or might not work on Windows.
 
+# Features
+- Shares the folder `/share/` from the host to the container.
+- Changes directory to same working directory as on host if exists.
+- Appends hosts `/etc/hosts` to container `/etc/hosts`.
+
 ## Installation
 1. Make sure Docker is installed.
 1. Clone this repository.
