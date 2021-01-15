@@ -103,4 +103,4 @@ source $ZSH/oh-my-zsh.sh
 DEFAULT_USER=root
 PYTHONIOENCODING=utf-8
 test -d $PWNKIT_PATH && cd $PWNKIT_PATH
-echo /etc/hosts_host >> /etc/hosts
+cat /etc/hosts_host >> /etc/hosts
