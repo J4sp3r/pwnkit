@@ -1,6 +1,5 @@
 #!/bin/sh
 set -e
-[ "$UID" -eq 0 ] || exec sudo sh "$0" "$@"
 
 MY_PATH=$(dirname "$0")
 "$MY_PATH/pwnkit-ascii"
