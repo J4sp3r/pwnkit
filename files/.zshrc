@@ -102,5 +102,9 @@ source $ZSH/oh-my-zsh.sh
 
 DEFAULT_USER=root
 PYTHONIOENCODING=utf-8
+
+alias cdp="cd \`cat /share/.curproj\`"
+alias setp="echo \`pwd\` > /share/.curproj"
+
 test -d $PWNKIT_PATH && cd $PWNKIT_PATH
 cat /etc/hosts_host >> /etc/hosts
