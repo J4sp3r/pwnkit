@@ -8,12 +8,23 @@ This tool is only tested for Linux and Mac, it might or might not work on Window
 - Shares the folder `/share/` from the host to the container.
 - Changes directory to same working directory as on host if exists.
 - Appends hosts `/etc/hosts` to container `/etc/hosts`.
+- Easy project selection.
 
 ## Installation
 1. Make sure Docker is installed.
 1. Clone this repository.
 1. Optional: Add extracted location to path for easy execution.
 1. Run `./pwnkit` or `pwnkit`.
+
+## Project selection
+Using the command `setp` the current working directory will be stored as the current project in `/share/.curproj`.
+The command `cdp` can then go tho the current project using the `/share/.curproj` file.
+This works within `pwnkit` but can also work outside `pwnkit` by adding the following to your `.zshrc` or equivalent:
+```
+alias cdp="cd \`cat /share/.curproj\`"
+alias setp="echo \`pwd\` > /share/.curproj"
+```
+This only works well if you use the `/share` folder to share files between `pwnkit` and its host.
 
 ## Mounting a volume into pwnkit
 Change the file ./pwnkit-start from  
