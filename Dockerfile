@@ -14,6 +14,7 @@ RUN apt-get install -y fcrackzip
 RUN apt-get install -y gdb
 RUN apt-get install -y git
 RUN apt-get install -y gobuster
+RUN apt-get install -y iputils-ping
 RUN apt-get install -y john
 RUN apt-get install -y joomscan
 RUN apt-get install -y libc6-i386
@@ -34,7 +35,9 @@ RUN apt-get install -y python-dev
 RUN apt-get install -y screen
 RUN apt-get install -y smbmap
 RUN apt-get install -y sqlmap
+RUN apt-get install -y sslscan
 RUN apt-get install -y strace
+RUN apt-get install -y telnet
 RUN apt-get install -y tree
 RUN apt-get install -y vim
 RUN apt-get install -y wfuzz
