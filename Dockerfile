@@ -11,6 +11,7 @@ RUN apt-get install -y dirb
 RUN apt-get install -y dnsutils
 RUN apt-get install -y exploitdb
 RUN apt-get install -y fcrackzip
+RUN apt-get install -y ftp
 RUN apt-get install -y gdb
 RUN apt-get install -y git
 RUN apt-get install -y gobuster
@@ -24,6 +25,7 @@ RUN apt-get install -y ltrace
 RUN apt-get install -y man
 RUN apt-get install -y nano
 RUN apt-get install -y netcat
+RUN apt-get install -y nikto
 RUN apt-get install -y nmap
 RUN apt-get install -y pcregrep
 RUN apt-get install -y php
