@@ -26,6 +26,7 @@ RUN apt-get install -y man
 RUN apt-get install -y nano
 RUN apt-get install -y netcat
 RUN apt-get install -y nikto
+RUN apt-get install -y nishang
 RUN apt-get install -y nmap
 RUN apt-get install -y pcregrep
 RUN apt-get install -y php
