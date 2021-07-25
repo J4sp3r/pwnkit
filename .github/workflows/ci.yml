@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: jasperboot/pwnkit:tagname
+          tags: jasperboot/pwnkit:latest
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
