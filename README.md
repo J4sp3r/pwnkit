@@ -4,6 +4,8 @@ This is a collection of tools from Kali to run on any machine with a docker imag
 
 This tool is only tested for Linux and Mac, it might or might not work on Windows.
 
+** Please use at your own risk. Always check what you are running! **
+
 # Features
 - Shares the folder `/share/` from the host to the container.
 - Changes directory to same working directory as on host if exists.
