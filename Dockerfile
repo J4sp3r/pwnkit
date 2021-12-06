@@ -5,6 +5,10 @@ RUN dpkg --add-architecture i386
 RUN export DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
 
+# This is some magic to prevent interactive prompts during installation in 'keyboard-configuration'
+RUN echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
+RUN apt-get install -y -q
+
 RUN apt-get install -y binwalk cmake libcurl4-openssl-dev libgmp3-dev libmpc-dev libssl-dev locales metasploit-framework
 
 RUN apt-get install -y crackmapexec
