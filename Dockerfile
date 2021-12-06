@@ -17,7 +17,7 @@ RUN apt-get install -y dnsutils
 RUN apt-get install -y enum4linux
 RUN apt-get install -y exploitdb
 RUN apt-get install -y fcrackzip
-# RUN apt-get install -y ftp
+RUN apt-get install -y ftp-ssl
 RUN apt-get install -y gdb
 RUN apt-get install -y git
 RUN apt-get install -y gobuster
