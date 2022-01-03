@@ -45,6 +45,7 @@ RUN apt-get install -y python3-pip
 RUN apt-get install -y screen
 RUN apt-get install -y smbmap
 RUN apt-get install -y sqlmap
+RUN apt-get install -y sqsh
 RUN apt-get install -y sslscan
 RUN apt-get install -y strace
 RUN apt-get install -y telnet
