@@ -89,7 +89,6 @@ RUN pip3 install --upgrade pycryptodome
 RUN pip3 install --upgrade requests
 RUN pip3 install --upgrade ropper
 RUN pip3 install --upgrade six
-RUN pip3 install --upgrade SymPy
 RUN pip3 install --upgrade tqdm
 RUN pip3 install --upgrade uncompyle6
 RUN pip3 install --upgrade unicorn
