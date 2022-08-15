@@ -24,7 +24,6 @@ RUN apt-get install -y gobuster
 RUN apt-get install -y iputils-ping
 RUN apt-get install -y john
 RUN apt-get install -y joomscan
-RUN apt-get install -y libc6-i386
 RUN apt-get install -y libimage-exiftool-perl
 RUN apt-get install -y libpcre++-dev
 RUN apt-get install -y ltrace
