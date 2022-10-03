@@ -25,7 +25,6 @@ RUN apt-get install -y iputils-ping
 RUN apt-get install -y john
 RUN apt-get install -y joomscan
 RUN apt-get install -y libimage-exiftool-perl
-RUN apt-get install -y libpcre++-dev
 RUN apt-get install -y ltrace
 RUN apt-get install -y man
 RUN apt-get install -y nano
