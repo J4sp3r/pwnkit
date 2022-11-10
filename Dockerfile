@@ -11,12 +11,15 @@ RUN apt-get install -y -q
 
 RUN apt-get install -y binwalk cmake libcurl4-openssl-dev libgmp3-dev libmpc-dev libssl-dev locales metasploit-framework
 
+RUN apt-get install -y amass
 RUN apt-get install -y crackmapexec
 RUN apt-get install -y dirb
+RUN apt-get install -y dnsrecon
 RUN apt-get install -y dnsutils
 RUN apt-get install -y enum4linux
 RUN apt-get install -y exploitdb
 RUN apt-get install -y fcrackzip
+RUN apt-get install -y ffuf
 RUN apt-get install -y ftp-ssl
 RUN apt-get install -y gdb
 RUN apt-get install -y git
@@ -27,6 +30,7 @@ RUN apt-get install -y joomscan
 RUN apt-get install -y libimage-exiftool-perl
 RUN apt-get install -y ltrace
 RUN apt-get install -y man
+RUN apt-get install -y masscan
 RUN apt-get install -y nano
 RUN apt-get install -y ncat
 RUN apt-get install -y nfs-common
