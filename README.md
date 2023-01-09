@@ -43,3 +43,4 @@ to
 ## Using pwntools and gdb
 1. Add the following to your pwntools script: ```context.terminal = ['/root/tools/launch-in-session.sh', 'gdb-session']```.
 2. When pwntools opens a gdb session, execute `pwnkit-gdb` on your local machine to attach.
+
