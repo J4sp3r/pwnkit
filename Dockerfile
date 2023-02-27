@@ -79,22 +79,23 @@ RUN pip2 install --upgrade PyCrypto
 
 RUN alias python=python3
 RUN alias pip=pip3
+RUN pip3 install --upgrade --break-system-packages pip
 
-RUN pip3 install --upgrade angr
-RUN pip3 install --upgrade GMPY2
-RUN pip3 install --upgrade keystone-engine
-RUN pip3 install --upgrade Pillow
-RUN pip3 install --upgrade pwntools
-RUN pip3 install --upgrade pycryptodome
-RUN pip3 install --upgrade requests
-RUN pip3 install --upgrade ropper
-RUN pip3 install --upgrade six
-RUN pip3 install --upgrade tqdm
-RUN pip3 install --upgrade uncompyle6
-RUN pip3 install --upgrade unicorn
-RUN pip3 install --upgrade urllib3
-RUN pip3 install --upgrade wfuzz
-RUN pip3 install --upgrade z3-solver
+RUN pip3 install --upgrade --break-system-packages angr
+RUN pip3 install --upgrade --break-system-packages GMPY2
+RUN pip3 install --upgrade --break-system-packages keystone-engine
+RUN pip3 install --upgrade --break-system-packages Pillow
+RUN pip3 install --upgrade --break-system-packages pwntools
+RUN pip3 install --upgrade --break-system-packages pycryptodome
+RUN pip3 install --upgrade --break-system-packages requests
+RUN pip3 install --upgrade --break-system-packages ropper
+RUN pip3 install --upgrade --break-system-packages six
+RUN pip3 install --upgrade --break-system-packages tqdm
+RUN pip3 install --upgrade --break-system-packages uncompyle6
+RUN pip3 install --upgrade --break-system-packages unicorn
+RUN pip3 install --upgrade --break-system-packages urllib3
+RUN pip3 install --upgrade --break-system-packages wfuzz
+RUN pip3 install --upgrade --break-system-packages z3-solver
 
 # Other tools
 RUN git clone https://github.com/hugsy/gef.git .gef && \
