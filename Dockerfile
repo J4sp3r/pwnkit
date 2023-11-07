@@ -24,6 +24,8 @@ RUN apt-get install -y ftp-ssl
 RUN apt-get install -y gdb
 RUN apt-get install -y git
 RUN apt-get install -y gobuster
+RUN apt-get install -y hashcat
+RUN apt-get install -y hashid
 RUN apt-get install -y iputils-ping
 RUN apt-get install -y john
 RUN apt-get install -y joomscan
