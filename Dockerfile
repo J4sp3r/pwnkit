@@ -57,8 +57,8 @@ RUN apt-get install -y tree
 RUN apt-get install -y vim
 RUN apt-get install -y wfuzz
 # RUN apt-get install -y wine
-RUN apt-get install -y wine32
-RUN apt-get install -y winexe
+# RUN apt-get install -y wine32
+# RUN apt-get install -y winexe
 RUN apt-get install -y wordlists
 RUN apt-get install -y xxd
 RUN apt-get install -y zsh
