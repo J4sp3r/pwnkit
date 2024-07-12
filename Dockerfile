@@ -81,7 +81,6 @@ RUN pip2 install --upgrade PyCrypto
 
 RUN alias python=python3
 RUN alias pip=pip3
-RUN pip3 install --upgrade --break-system-packages pip
 
 RUN pip3 install --upgrade --break-system-packages angr
 RUN pip3 install --upgrade --break-system-packages GMPY2
