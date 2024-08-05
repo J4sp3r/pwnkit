@@ -93,7 +93,6 @@ RUN pip3 install --upgrade --break-system-packages ropper
 RUN pip3 install --upgrade --break-system-packages six
 RUN pip3 install --upgrade --break-system-packages uncompyle6
 RUN pip3 install --upgrade --break-system-packages unicorn
-RUN pip3 install --upgrade --break-system-packages urllib3
 RUN pip3 install --upgrade --break-system-packages wfuzz
 RUN pip3 install --upgrade --break-system-packages z3-solver
 
