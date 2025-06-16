@@ -87,7 +87,6 @@ RUN pip3 install --upgrade --break-system-packages keystone-engine
 RUN pip3 install --upgrade --break-system-packages Pillow
 # RUN pip3 install --upgrade --break-system-packages pwntools
 RUN pip3 install --upgrade --break-system-packages pycryptodome
-RUN pip3 install --upgrade --break-system-packages requests
 # RUN pip3 install --upgrade --break-system-packages ropper
 RUN pip3 install --upgrade --break-system-packages six
 RUN pip3 install --upgrade --break-system-packages uncompyle6
